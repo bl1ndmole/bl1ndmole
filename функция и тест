@@ -2,16 +2,15 @@
 #include <vector>
 #include <gtest/gtest.h>
 using namespace std;
-int vec(vector<int> v, int n) {
-    for (int i : v) {
+vector<int> vec(vector<int> v, int n) {
+    for (auto& i : v) {
         i += n;
-        cout << i << ' ';
     }
-    return 0;
+    return v;
 }
 TEST(VectorComparisonTest, EqualVectors) {
     vector<int> v = {10, 20, -10};
-    n = 5;
+    int n = 5;
     vector<int> v1 = {15, 25, -5};
     bool a = (v1 == vec(v, n))
     ASSERT_TRUE(a);
